@@ -1,0 +1,27 @@
+{
+  "name": "reactpractice",
+  "version": "1.1.0",
+  "description": "hands-on coding to build interactive web pages using reusable building blocks called components.",
+  "keywords": [
+    "reactpractice"
+  ],
+  "homepage": "https://github.com/hajerabegum-hash/ReactJS-Practice#readme",
+  "bugs": {
+    "url": "https://github.com/hajerabegum-hash/ReactJS-Practice/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hajerabegum-hash/ReactJS-Practice.git"
+  },
+  "license": "ISC",
+  "author": "hajerabegum",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "parcel": "^2.16.4",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  }
+}
