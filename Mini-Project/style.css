@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: aqua;
+}
+.header {
+  background-color: bisque;
+  height: 110px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  align-items: center;
+}
+.logo-img > img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+.search-bar > input {
+  border-radius: 20px;
+  height: 50px;
+  width: 1000px;
+  color: white;
+  border: none; /* Remove all borders */
+  border-bottom: 2px solid #f22828; /* Add bottom border */
+  outline: none; /* Remove focus outline */
+  padding: 5px 0; /* Optional padding for spacing */
+  font-size: 16px;
+}
