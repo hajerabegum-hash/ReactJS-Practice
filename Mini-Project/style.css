@@ -3,7 +3,7 @@
   padding: 0;
 }
 body {
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 .header {
   background-color: bisque;
@@ -11,22 +11,69 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin: 20px;
+  /* margin: 20px; */
   align-items: center;
 }
-.logo-img > img {
+.header-logo > img {
   height: 100px;
-  width: 100px;
+  width: 6rem;
   border-radius: 50%;
+}
+
+.nav-items > ul {
+  display: flex;
+
+  list-style-type: none;
+}
+.nav-items > ul > li {
+  padding: 5px;
+  margin: 10px;
+  font-weight: bold;
 }
 .search-bar > input {
   border-radius: 20px;
   height: 50px;
-  width: 1000px;
-  color: white;
+  width: 800px;
+  color: rgb(210, 15, 15);
   border: none; /* Remove all borders */
   border-bottom: 2px solid #f22828; /* Add bottom border */
   outline: none; /* Remove focus outline */
   padding: 5px 0; /* Optional padding for spacing */
   font-size: 16px;
+}
+/* .search-logo {
+  width: 100rem;
+  height: 50px;
+  background-color: #f22828;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-right: 20px;
+  text-align: center;
+} */
+
+.rest-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.rest-card {
+  /* background-color: yellow; */
+  height: 20rem;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.221);
+  width: 270px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.rest-logo {
+  border-radius: 20px;
+  width: 100%;
+  border-radius: 10px;
+}
+.footer {
+  background-color: yellowgreen;
+  height: 500px;
+  width: 100vw;
 }
