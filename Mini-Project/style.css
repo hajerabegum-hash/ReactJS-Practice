@@ -13,6 +13,7 @@ body {
   justify-content: space-between;
   /* margin: 20px; */
   align-items: center;
+  border-radius: 20px;
 }
 .header-logo > img {
   height: 100px;
@@ -30,6 +31,11 @@ body {
   margin: 10px;
   font-weight: bold;
 }
+.nav-items > ul > li:hover {
+  transform: scale(0.9);
+  box-shadow: 0 0 10px maroon;
+  color:rgb(241, 7, 7)
+}
 .search-bar > input {
   border-radius: 20px;
   height: 50px;
@@ -40,6 +46,11 @@ body {
   outline: none; /* Remove focus outline */
   padding: 5px 0; /* Optional padding for spacing */
   font-size: 16px;
+}
+.search-bar > input:hover{
+   transform: scale(0.9);
+  box-shadow: 0 0 10px maroon;
+  color:rgb(241, 7, 7)
 }
 /* .search-logo {
   width: 100rem;
@@ -59,21 +70,56 @@ body {
 }
 .rest-card {
   /* background-color: yellow; */
-  height: 20rem;
+  height: 28rem;
   border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.221);
+  box-shadow: 0 0 10px rgba(224, 12, 12, 0.221);
   width: 270px;
   padding: 10px;
   border-radius: 10px;
+  overflow: auto;
+}
+.rest-card > h1 {
+  color: black;
+}
+.rest-card > h1:hover {
+  color: maroon;
 }
 
+.rest-card:hover {
+  transform: scale(0.9);
+  box-shadow: 0 0 10px Maroon;
+}
+.rest-card > h2 {
+  color: blue;
+}
+.rest-card > h3 {
+  color: rgb(81, 255, 0);
+}
+.rest-card > h4 {
+  color: rgb(255, 0, 0);
+}
+.rest-card > h5 {
+  color: rgb(0, 179, 255);
+}
 .rest-logo {
   border-radius: 20px;
   width: 100%;
   border-radius: 10px;
 }
 .footer {
-  background-color: yellowgreen;
-  height: 500px;
+  background-color: maroon;
+  height: 200px;
   width: 100vw;
+  color: beige;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+.logo-footer {
+  height: 100;
+  width: 100;
+  border-radius: 20px;
+}
+.logo-footer:hover {
+  transform: scale(0.9);
+  box-shadow: 0 0 10px white;
 }
