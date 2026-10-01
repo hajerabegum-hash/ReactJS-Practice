@@ -1,3 +1,5 @@
+import { imgURL } from "../utils/Constants";
+
 export const Restaurantscard = ({ resDetails }) => {
   const {
     id,
@@ -11,14 +13,7 @@ export const Restaurantscard = ({ resDetails }) => {
   } = resDetails;
   return (
     <div className="rest-card">
-      <img
-        className="rest-logo"
-        src={
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
-          imgId
-        }
-        alt="rest-logo"
-      />
+      <img className="rest-logo" src={imgURL + imgId} alt="rest-logo" />
       <h1>{resName}</h1>
       <h4>{cuisine}</h4>
 
