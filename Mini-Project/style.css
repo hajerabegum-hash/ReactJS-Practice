@@ -34,7 +34,7 @@ body {
 .nav-items > ul > li:hover {
   transform: scale(0.9);
   box-shadow: 0 0 10px maroon;
-  color:rgb(241, 7, 7)
+  color: rgb(241, 7, 7);
 }
 .search-bar > input {
   border-radius: 20px;
@@ -47,10 +47,10 @@ body {
   padding: 5px 0; /* Optional padding for spacing */
   font-size: 16px;
 }
-.search-bar > input:hover{
-   transform: scale(0.9);
+.search-bar > input:hover {
+  transform: scale(0.9);
   box-shadow: 0 0 10px maroon;
-  color:rgb(241, 7, 7)
+  color: rgb(241, 7, 7);
 }
 /* .search-logo {
   width: 100rem;
@@ -122,4 +122,83 @@ body {
 .logo-footer:hover {
   transform: scale(0.9);
   box-shadow: 0 0 10px white;
+}
+
+.wrapper-shimmi {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.shimmi-card {
+  height: 28rem;
+  width: 250px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  margin: 10px;
+  /* box-shadow: 0 0 5px rgba(0, 0, 255, 0.61); */
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.shimmi-card::before {
+  content: "";
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0),
+    rgb(255, 255, 255),
+    rgba(255, 255, 255, 0)
+  );
+  position: absolute;
+  top: 0;
+  left: -150px;
+  transform: skewX(-20deg);
+  animation: shimmi 1s linear infinite;
+}
+.shimmi-image {
+  width: 100%;
+  height: 150px;
+  background-color: rgba(201, 195, 195, 0.651);
+  border-radius: 10px;
+}
+.shimmi-title {
+  width: 100%;
+  height: 30px;
+  background-color: rgba(201, 195, 195, 0.651);
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.shimmi-cusine {
+  width: 100%;
+  height: 30px;
+  background-color: rgba(201, 195, 195, 0.651);
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.shimmi-rating {
+  width: 100%;
+  height: 30px;
+  background-color: rgba(201, 195, 195, 0.651);
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.shimmi-delivery {
+  width: 100%;
+  height: 30px;
+  background-color: rgba(201, 195, 195, 0.651);
+  border-radius: 10px;
+  margin-top: 10px;
+}
+@keyframes shimmi {
+  0% {
+    transform: translatex(-200%) skewX(-20deg);
+  }
+  50% {
+    transform: translatex(250%) skewX(-20deg);
+  }
+  100% {
+    transform: translatex(400%) skewX(-20deg);
+  }
 }

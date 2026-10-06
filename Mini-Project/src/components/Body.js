@@ -1,30 +1,38 @@
-import restaurantsArr from "../utils/Mockdata";
+// import restaurantsArr from "../utils/Mockdata";
 import { Restaurantscard } from "./Restaurantscard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Shimmer from "./Shimmer";
+import { swiggyRestURL } from "../utils/Constants";
 
 const Body = () => {
-  const [filteredArray, setFilteredArray] = useState(restaurantsArr);
+  const [restaurantArr, setRestaurantsArray] = useState(null);
+  
 
+  async function fetchingRestArray() {
+    const response = await fetch(swiggyRestURL);
+    const data = await response.json();
+
+
+    setRestaurantsArray(data?.data?.cards?.cards?.gridelements?.);
+    console.log("datachecking");
+  }
+
+  useEffect(()=>{
+    console.log("i m inside a component");
+    fetchingRestArray()
+    
+  },[])
+
+  if (restaurantArr==null){
+    return <div><Shimmer/></div>
+  }
   return (
     <div>
-      <button
-        onClick={() => {
-          const NewArry = restaurantsArr.filter((elem) => {
-            if (elem.avgRating > 4.3) {
-              return true;
-            } else {
-              return false;
-            }
-          });
-          setFilteredArray(NewArry);
-        }}
-      >
-        FILTERED ARRAY{" "}
-      </button>
+    
 
       <div className="rest-container">
-        {filteredArray.map((elem) => {
-          return <Restaurantscard resDetails={elem} key={elem.id} />;
+        {restaurantArr.map((elem) => {
+          return <Restaurantscard resDetails={elem} key={elem.info.id} />;
         })}
       </div>
     </div>
