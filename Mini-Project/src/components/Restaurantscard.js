@@ -11,17 +11,25 @@ export const Restaurantscard = ({ resDetails }) => {
   //   imgId,
   //   location,
   // } = resDetails;
+  console.log(resDetails);
+  console.log(resDetails.info.locality);
+
   return (
     <div className="rest-card">
-      <img className="rest-logo" src={imgURL + resDetails.info.imgId} alt="rest-logo" />
+      <img
+        className="rest-logo"
+        src={imgURL + resDetails.info.cloudinaryImageId}
+        alt="rest-logo"
+      />
       <h1>{resDetails.info.name}</h1>
       <h4>{resDetails.info.cuisine}</h4>
 
       <h2> Rating ⭐ {resDetails.info.avgRating} Stars</h2>
       <h3>
-        {resDetails.info.sla.delieveryTime} mins | ₹{resDetails.info.costForTwo} for two
+        {resDetails.info.sla.delieveryTime} mins | ₹{resDetails.info.costForTwo}{" "}
+        for two
       </h3>
-      <h5>{resDetails.info.location}</h5>
+      <h5>{resDetails.info.locality}</h5>
     </div>
   );
 };
