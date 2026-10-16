@@ -52,6 +52,34 @@ body {
   box-shadow: 0 0 10px maroon;
   color: rgb(241, 7, 7);
 }
+
+/* Media Query: Desktop Screens (768px and wider) */
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row; /* Switch layout back to horizontal row */
+    justify-content: space-between; /* Space out items evenly across the width */
+    height: 110px;
+    padding: 0 30px;
+  }
+
+  .header-logo > img {
+    height: 100px;
+    width: 6rem;
+  }
+
+  .search-bar {
+    max-width: 50%; /* Allows the search bar to occupy up to half the header on desktop */
+  }
+
+  .nav-items {
+    width: auto;
+  }
+
+  .nav-items > ul {
+    justify-content: flex-end;
+  }
+}
+
 /* .search-logo {
   width: 100rem;
   height: 50px;
@@ -349,4 +377,356 @@ body {
   border-top: 1px solid #333333;
   font-size: 0.85rem;
   color: maroon;
+}
+
+/* --------about page styleing---------? */
+
+/* About Page Structure */
+.about-section {
+  padding: 80px 20px;
+  background-color: #fcfbfa;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: maroon;
+  overflow: hidden;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Text Centering */
+.about-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-subtitle {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: maroon;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.about-main-title {
+  font-size: 36px;
+  margin: 10px 0;
+  color: maroon;
+}
+
+.about-divider {
+  width: 60px;
+  height: 3px;
+  background-color: #ffe4c4;
+  margin: 15px auto 0;
+}
+
+/* Core Multi-Column Layout Grid */
+.about-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+/* Overlapping Image Composition Block */
+.about-image-wrapper {
+  position: relative;
+  height: 450px;
+}
+
+.about-image-card {
+  position: absolute;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+}
+
+.about-image-card:hover {
+  transform: translateY(-5px);
+}
+
+.about-image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-main-img {
+  width: 75%;
+  height: 380px;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.about-accent-img {
+  width: 50%;
+  height: 260px;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  border: 6px solid #fcfbfa;
+}
+
+/* Copywriting Details Section */
+.about-info-content h2 {
+  font-size: 28px;
+  color: maroon;
+  margin-bottom: 20px;
+}
+
+.about-intro-paragraph {
+  font-size: 16px;
+  line-height: 1.6;
+  color: maroon;
+  margin-bottom: 30px;
+}
+
+/* Navigation Tabs Interactivity Layout */
+.about-tab-buttons {
+  display: flex;
+  gap: 15px;
+  border-bottom: 2px solid #eaeaea;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.about-tab-btn {
+  background: none;
+  border: none;
+  padding: 8px 16px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  color: maroon;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+}
+
+.about-tab-btn:hover {
+  color: maroon;
+}
+
+.about-tab-btn.active {
+  color: maroon;
+  font-weight: 600;
+}
+
+.about-tab-btn.active::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffe4c4;
+}
+
+/* Tab Text Block Styling */
+.about-tab-body {
+  min-height: 120px;
+  margin-bottom: 30px;
+}
+
+.about-tab-body h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: maroon;
+}
+
+.about-tab-body p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: maroon;
+}
+
+/* Metrics and Counter Performance Grid */
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  border-top: 1px solid #eaeaea;
+  padding-top: 30px;
+}
+
+.about-stat-item {
+  text-align: left;
+}
+
+.about-stat-number {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  color: maroon;
+}
+
+.about-stat-label {
+  font-size: 12px;
+  color: maroon;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive Breakdown Media Queries */
+/* @media (max-width: 992px) {
+  .about-content-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-image-wrapper {
+    height: 400px;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .about-main-img {
+    height: 330px;
+  }
+
+  .about-accent-img {
+    height: 220px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-section {
+    padding: 50px 15px;
+  }
+
+  .about-main-title {
+    font-size: 28px;
+  }
+
+  .about-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+} */
+
+/* Responsive Header */
+.header {
+  background-color: bisque;
+  width: 100%;
+  min-height: 110px;
+  height: auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+/* Logo */
+.header-logo img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Search bar */
+.search-bar {
+  flex: 1;
+  min-width: 150px;
+  max-width: 600px;
+}
+
+.search-bar input {
+  width: 100%;
+  height: 45px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #f22828;
+  border-radius: 20px;
+  outline: none;
+  font-size: 16px;
+}
+
+/* Navigation */
+.nav-items ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 10px;
+}
+
+.nav-items ul li {
+  margin: 0;
+  padding: 8px;
+  font-weight: bold;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .header {
+    justify-content: center;
+  }
+
+  .search-bar {
+    max-width: 100%;
+  }
+
+  .nav-items {
+    width: 100%;
+  }
+
+  .nav-items ul {
+    justify-content: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    padding: 15px 10px;
+    gap: 12px;
+  }
+
+  .header-logo img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .search-bar {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    flex: none;
+  }
+
+  .search-bar input {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .nav-items {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .nav-items ul {
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .nav-items ul li {
+    margin: 0;
+    padding: 8px 6px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
 }
