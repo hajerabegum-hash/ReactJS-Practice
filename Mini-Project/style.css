@@ -17,24 +17,27 @@ body {
 }
 .header-logo > img {
   height: 100px;
-  width: 6rem;
+  width: 10rem;
   border-radius: 50%;
 }
 
 .nav-items > ul {
   display: flex;
-
   list-style-type: none;
 }
 .nav-items > ul > li {
   padding: 5px;
-  margin: 10px;
+  margin: 20px;
   font-weight: bold;
+  /* text-decoration-style: none; */
 }
 .nav-items > ul > li:hover {
   transform: scale(0.9);
   box-shadow: 0 0 10px maroon;
   color: rgb(241, 7, 7);
+  border-radius: 10px;
+  text-decoration-style: none;
+
 }
 .search-bar > input {
   border-radius: 20px;

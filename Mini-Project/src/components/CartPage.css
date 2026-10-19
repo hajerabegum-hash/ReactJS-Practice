@@ -1,0 +1,250 @@
+:root {
+  --primary-color: maroon;
+  --secondary-color: #2f3542;
+  --bg-light: #f1f2f6;
+  --border-color: #e4e7eb;
+  --text-muted: #747d8c;
+}
+
+.cart-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--secondary-color);
+}
+
+.cart-title {
+  font-size: 2rem;
+  margin-bottom: 24px;
+  font-weight: 700;
+  border-bottom: 3px solid var(--primary-color);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.cart-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* Items List Styling */
+.cart-items-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cart-item-card {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color);
+}
+
+.item-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.item-details {
+  flex-grow: 1;
+}
+
+.item-category {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.item-name {
+  font-size: 1.15rem;
+  margin: 4px 0;
+  font-weight: 600;
+}
+
+.item-price-unit {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.item-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  background: #FFE4C4;
+  border-radius: 20px;
+  padding: 4px;
+}
+
+.qty-btn {
+  background: #FFE4C4;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px maroon;
+  transition: background 0.2s;
+}
+
+.qty-btn:hover {
+  background: maroon;
+  color: #FFE4C4;
+}
+
+.qty-value {
+  padding: 0 12px;
+  font-weight: 600;
+  min-width: 20px;
+  text-align: center;
+}
+
+.item-total-price {
+  font-size: 1.1rem;
+  font-weight: 600;
+  min-width: 70px;
+  text-align: right;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.delete-btn:hover {
+  color: maroon;
+}
+
+/* Summary Card Styling */
+.summary-card {
+  background: #FFE4C4;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px maroon;
+  border: 1px solid var(--border-color);
+}
+
+.summary-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  color: maroon;
+}
+
+.summary-divider {
+  height: 1px;
+  background: #FFE4C4;
+  margin: 16px 0;
+}
+
+.total-row {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: maroon;
+}
+
+.promo-code-box {
+  display: flex;
+  margin: 20px 0;
+  gap: 8px;
+}
+
+.promo-input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  outline: none;
+}
+
+.promo-btn {
+  background: #FFE4C4;
+  color: maroon;
+  border: none;
+  padding: 0 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.checkout-btn {
+  width: 100%;
+  background: #FFE4C4;
+  color: maroon;
+  border: none;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.checkout-btn:hover {
+  background:maroon;
+  color: #FFE4C4
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 60px 0;
+}
+
+.browse-btn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+/* Responsive Grid Adaptation */
+@media (max-width: 768px) {
+  .cart-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-item-card {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .item-actions {
+    width: 100%;
+    justify-content: space-between;
+    border-top: 1px solid var(--bg-light);
+    padding-top: 12px;
+    margin-top: 8px;
+  }
+}

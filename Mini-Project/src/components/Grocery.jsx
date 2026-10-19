@@ -3,12 +3,37 @@ import "./Grocery.css";
 const categories = [
   { icon: "🥬", name: "Fresh veggies", note: "Picked today", color: "mint" },
   { icon: "🍎", name: "Fresh fruits", note: "Nature's best", color: "peach" },
-  { icon: "🥛", name: "Dairy, bread & eggs", note: "Daily essentials", color: "blue" },
-  { icon: "🍿", name: "Snacks & munchies", note: "Little treats", color: "yellow" },
+  {
+    icon: "🥛",
+    name: "Dairy, bread & eggs",
+    note: "Daily essentials",
+    color: "blue",
+  },
+  {
+    icon: "🍿",
+    name: "Snacks & munchies",
+    note: "Little treats",
+    color: "yellow",
+  },
   { icon: "🧴", name: "Beauty & care", note: "Feel-good finds", color: "pink" },
-  { icon: "🧹", name: "Home & kitchen", note: "For happy homes", color: "lavender" },
-  { icon: "🍚", name: "Atta, rice & dal", note: "Pantry staples", color: "cream" },
-  { icon: "🥤", name: "Drinks & juices", note: "Sip something nice", color: "sky" },
+  {
+    icon: "🧹",
+    name: "Home & kitchen",
+    note: "For happy homes",
+    color: "lavender",
+  },
+  {
+    icon: "🍚",
+    name: "Atta, rice & dal",
+    note: "Pantry staples",
+    color: "cream",
+  },
+  {
+    icon: "🥤",
+    name: "Drinks & juices",
+    note: "Sip something nice",
+    color: "sky",
+  },
 ];
 
 const products = [
@@ -122,7 +147,11 @@ function ProductCard({ product }) {
       <div className={`grocery-product-art ${product.tone}`}>
         <img src={imageUrl(product.image)} alt={product.name} loading="lazy" />
         <span className="grocery-product-badge">{product.offer}</span>
-        <button className="grocery-add-button" type="button" aria-label={`Add ${product.name}`}>
+        <button
+          className="grocery-add-button"
+          type="button"
+          aria-label={`Add ${product.name}`}
+        >
           +
         </button>
       </div>
@@ -174,69 +203,134 @@ const Grocery = () => {
       </div>
 
       <div className="grocery-shell">
-        <section className="grocery-welcome" aria-label="Delivery location and search">
+        <section
+          className="grocery-welcome"
+          aria-label="Delivery location and search"
+        >
           <div className="grocery-delivery">
-            <span className="grocery-location-icon" aria-hidden="true">⌖</span>
+            <span className="grocery-location-icon" aria-hidden="true">
+              ⌖
+            </span>
             <div>
               <p>Delivering to</p>
-              <strong>Indiranagar, Bengaluru <span aria-hidden="true">⌄</span></strong>
+              <strong>
+                Indiranagar, Bengaluru <span aria-hidden="true">⌄</span>
+              </strong>
             </div>
           </div>
           <div className="grocery-search">
-            <span className="grocery-search-icon" aria-hidden="true">⌕</span>
+            <span className="grocery-search-icon" aria-hidden="true">
+              ⌕
+            </span>
             <span>Search for fruits, snacks, and all things lovely</span>
             <kbd>⌘ K</kbd>
           </div>
           <div className="grocery-profile">
             <span aria-hidden="true">☺</span>
-            <div><strong>Hey, there!</strong><small>Your happy place</small></div>
+            <div>
+              <strong>Hey, there!</strong>
+              <small>Your happy place</small>
+            </div>
           </div>
         </section>
 
         <nav className="grocery-quick-nav" aria-label="Shop departments">
-          <a className="active" href="#categories">Shop all</a>
+          <a className="active" href="#categories">
+            Shop all
+          </a>
           <a href="#fresh-picks">Fresh picks</a>
           <a href="#everyday-favourites">Everyday essentials</a>
           <a href="#collections">Little collections</a>
-          <span className="grocery-nav-note">Thoughtfully picked for you <span>✳</span></span>
+          <span className="grocery-nav-note">
+            Thoughtfully picked for you <span>✳</span>
+          </span>
         </nav>
 
         <section className="grocery-hero">
           <div className="grocery-hero-copy">
-            <span className="grocery-hero-sticker">YOUR NEIGHBOURHOOD MARKET, ONLINE</span>
-            <h1>Little joys.<br /><em>Delivered.</em></h1>
-            <p>From your morning chai to tonight’s dinner, find the good stuff for every little moment.</p>
+            <span className="grocery-hero-sticker">
+              YOUR NEIGHBOURHOOD MARKET, ONLINE
+            </span>
+            <h1>
+              Little joys.
+              <br />
+              <em>Delivered.</em>
+            </h1>
+            <p>
+              From your morning chai to tonight’s dinner, find the good stuff
+              for every little moment.
+            </p>
             <a className="grocery-hero-cta" href="#categories">
               Explore the good stuff <span aria-hidden="true">→</span>
             </a>
             <div className="grocery-hero-proof">
               <div className="grocery-avatar-stack" aria-hidden="true">
-                <span>👩🏽</span><span>👨🏻</span><span>👩🏿</span>
+                <span>👩🏽</span>
+                <span>👨🏻</span>
+                <span>👩🏿</span>
               </div>
-              <p><strong>12,000+ happy homes</strong><br />stock up with us every week</p>
+              <p>
+                <strong>12,000+ happy homes</strong>
+                <br />
+                stock up with us every week
+              </p>
             </div>
           </div>
           <div className="grocery-hero-art">
             <div className="grocery-hero-orbit grocery-orbit-one" />
             <div className="grocery-hero-orbit grocery-orbit-two" />
-            <div className="grocery-hero-note"><span>✿</span><br />A little<br />more fresh</div>
+            <div className="grocery-hero-note">
+              <span>✿</span>
+              <br />A little
+              <br />
+              more fresh
+            </div>
             <img
-              src={imageUrl("photo-1542838132-92c53300491e", 900)}
+              // src={imageUrl("photo-1542838132-92c53300491e", 900)}
+              src="https://ik.imagekit.io/idrowysjp/veggies.webp"
               alt="A colourful basket of fresh market vegetables"
             />
-            <span className="grocery-hero-caption">Picked with care, packed with love.</span>
+            <span className="grocery-hero-caption">
+              Picked with care, packed with love.
+            </span>
           </div>
           <div className="grocery-hero-bottom">
             <span>Good food, good mood.</span>
-            <span>01 — 03 <i /></span>
+            <span>
+              01 — 03 <i />
+            </span>
           </div>
         </section>
 
         <section className="grocery-promise-row" aria-label="Our promises">
-          <div><span>⚡</span><p><strong>At your door in minutes</strong><small>Quick delivery, no fuss</small></p></div>
-          <div><span>🌱</span><p><strong>Freshness you can feel</strong><small>Picked for your basket today</small></p></div>
-          <div><span>♡</span><p><strong>Lovely prices, always</strong><small>Little joys shouldn't cost more</small></p></div>
-          <div><span>☻</span><p><strong>Real people, real help</strong><small>We're always happy to help</small></p></div>
+          <div>
+            <span>⚡</span>
+            <p>
+              <strong>At your door in minutes</strong>
+              <small>Quick delivery, no fuss</small>
+            </p>
+          </div>
+          <div>
+            <span>🌱</span>
+            <p>
+              <strong>Freshness you can feel</strong>
+              <small>Picked for your basket today</small>
+            </p>
+          </div>
+          <div>
+            <span>♡</span>
+            <p>
+              <strong>Lovely prices, always</strong>
+              <small>Little joys shouldn't cost more</small>
+            </p>
+          </div>
+          <div>
+            <span>☻</span>
+            <p>
+              <strong>Real people, real help</strong>
+              <small>We're always happy to help</small>
+            </p>
+          </div>
         </section>
 
         <section className="grocery-categories" id="categories">
@@ -244,18 +338,30 @@ const Grocery = () => {
             <div>
               <p className="grocery-eyebrow">A LITTLE BIT OF EVERYTHING</p>
               <h2>What are you in the mood for?</h2>
-              <p className="grocery-section-description">The good stuff, tucked into its own little corner.</p>
+              <p className="grocery-section-description">
+                The good stuff, tucked into its own little corner.
+              </p>
             </div>
-            <span className="grocery-hand-doodle" aria-hidden="true">↘</span>
+            <span className="grocery-hand-doodle" aria-hidden="true">
+              ↘
+            </span>
           </div>
           <div className="grocery-category-grid">
             {categories.map((category, index) => (
-              <a className={`grocery-category-card ${category.color}`} href="#fresh-picks" key={category.name}>
+              <a
+                className={`grocery-category-card ${category.color}`}
+                href="#fresh-picks"
+                key={category.name}
+              >
                 <span className="grocery-category-number">0{index + 1}</span>
-                <span className="grocery-category-icon" aria-hidden="true">{category.icon}</span>
+                <span className="grocery-category-icon" aria-hidden="true">
+                  {category.icon}
+                </span>
                 <strong>{category.name}</strong>
                 <small>{category.note}</small>
-                <span className="grocery-category-arrow" aria-hidden="true">↗</span>
+                <span className="grocery-category-arrow" aria-hidden="true">
+                  ↗
+                </span>
               </a>
             ))}
           </div>
@@ -263,15 +369,33 @@ const Grocery = () => {
 
         <section className="grocery-seasonal-banner">
           <div className="grocery-seasonal-art" aria-hidden="true">
-            <span>🥑</span><span>🍋</span><span>🥝</span><span>🍊</span>
+            <span>🥑</span>
+            <span>🍋</span>
+            <span>🥝</span>
+            <span>🍊</span>
           </div>
           <div className="grocery-seasonal-copy">
             <p className="grocery-eyebrow">A BRIGHTER KIND OF BASKET</p>
-            <h2>Make room for<br /><em>something fresh.</em></h2>
-            <p>Colourful, crunchy, and straight from the good-earth gang. Your feel-good picks are waiting.</p>
-            <a href="#fresh-picks">Meet your fresh picks <span aria-hidden="true">→</span></a>
+            <h2>
+              Make room for
+              <br />
+              <em>something fresh.</em>
+            </h2>
+            <p>
+              Colourful, crunchy, and straight from the good-earth gang. Your
+              feel-good picks are waiting.
+            </p>
+            <a href="#fresh-picks">
+              Meet your fresh picks <span aria-hidden="true">→</span>
+            </a>
           </div>
-          <div className="grocery-seasonal-seal"><span>100%</span><br />GOOD<br />MOOD</div>
+          <div className="grocery-seasonal-seal">
+            <span>100%</span>
+            <br />
+            GOOD
+            <br />
+            MOOD
+          </div>
         </section>
 
         <ProductShelf
@@ -287,32 +411,54 @@ const Grocery = () => {
             <div>
               <p className="grocery-eyebrow">MADE FOR YOUR EVERYDAY</p>
               <h2>Little collections, lots of love.</h2>
-              <p className="grocery-section-description">A few good things to make an ordinary day feel extra nice.</p>
+              <p className="grocery-section-description">
+                A few good things to make an ordinary day feel extra nice.
+              </p>
             </div>
-            <a className="grocery-see-all" href="#everyday-favourites">Browse all <span aria-hidden="true">↗</span></a>
+            <a className="grocery-see-all" href="#everyday-favourites">
+              Browse all <span aria-hidden="true">↗</span>
+            </a>
           </div>
           <div className="grocery-collection-grid">
             {collections.map((collection, index) => (
-              <a className={`grocery-collection-card ${collection.className}`} href="#everyday-favourites" key={collection.title}>
-                <span className="grocery-collection-count">COLLECTION 0{index + 1}</span>
-                <span className="grocery-collection-icon" aria-hidden="true">{collection.icon}</span>
+              <a
+                className={`grocery-collection-card ${collection.className}`}
+                href="#everyday-favourites"
+                key={collection.title}
+              >
+                <span className="grocery-collection-count">
+                  COLLECTION 0{index + 1}
+                </span>
+                <span className="grocery-collection-icon" aria-hidden="true">
+                  {collection.icon}
+                </span>
                 <p className="grocery-eyebrow">{collection.eyebrow}</p>
                 <h3>{collection.title}</h3>
                 <p className="grocery-collection-copy">{collection.copy}</p>
-                <span className="grocery-collection-items">{collection.items}</span>
-                <span className="grocery-collection-link">Explore the edit <span aria-hidden="true">↗</span></span>
+                <span className="grocery-collection-items">
+                  {collection.items}
+                </span>
+                <span className="grocery-collection-link">
+                  Explore the edit <span aria-hidden="true">↗</span>
+                </span>
               </a>
             ))}
           </div>
         </section>
 
         <section className="grocery-note-banner">
-          <span className="grocery-note-spark" aria-hidden="true">✳</span>
+          <span className="grocery-note-spark" aria-hidden="true">
+            ✳
+          </span>
           <div>
             <p className="grocery-eyebrow">A SMALL NOTE FROM US</p>
-            <p className="grocery-note-quote">“The best things in life are shared — especially the last mango.”</p>
+            <p className="grocery-note-quote">
+              “The best things in life are shared — especially the last mango.”
+            </p>
           </div>
-          <span className="grocery-note-signoff">With love, your local grocer <span>♡</span></span>
+          <span className="grocery-note-signoff">
+            With love, your local grocer <span>♡</span>
+          </span>
         </section>
 
         <div id="all-products">
@@ -326,13 +472,19 @@ const Grocery = () => {
         </div>
 
         <section className="grocery-bottom-promo">
-          <div className="grocery-bottom-promo-icon" aria-hidden="true">🧺</div>
+          <div className="grocery-bottom-promo-icon" aria-hidden="true">
+            🧺
+          </div>
           <div>
             <p className="grocery-eyebrow">YOUR BASKET CALLED</p>
             <h2>It has room for a little more happy.</h2>
           </div>
-          <a href="#categories">Keep exploring <span aria-hidden="true">→</span></a>
-          <span className="grocery-bottom-flower" aria-hidden="true">✿</span>
+          <a href="#categories">
+            Keep exploring <span aria-hidden="true">→</span>
+          </a>
+          <span className="grocery-bottom-flower" aria-hidden="true">
+            ✿
+          </span>
         </section>
       </div>
     </main>

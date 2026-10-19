@@ -6,9 +6,12 @@ import { Restaurantscard } from "./Restaurantscard";
 import Shimmer from "./Shimmer";
 // import { swiggyRestURL } from "../utils/Constants";
 import { Link } from "react-router-dom";
+import withDiscountLabel from "./withDiscountLabel";
 
 const Body = () => {
   const restaurantArr = useRestaurantArr();
+
+  const DiscountedRestaurantCard = withDiscountLabel(Restaurantscard);
 
   const isOnline = useOnlineStatus();
 
@@ -24,11 +27,17 @@ const Body = () => {
   return (
     <div>
       <div className="rest-container">
-        {restaurantArr.map((elem) => {
+        {/* {restaurantArr.map((elem) => {*/}
+        {restaurantArr.map((elem, index) => {
+          console.log(elem.info.aggregatedDiscountInfoV3);
+
           return (
             <Link to={`/menu/${elem.info.id}`} key={elem.info.id}>
-              {" "}
-              <Restaurantscard resDetails={elem} />{" "}
+              {elem.info.aggregatedDiscountInfoV3 ? (
+                <DiscountedRestaurantCard resDetails={elem} />
+              ) : (
+                <Restaurantscard resDetails={elem} />
+              )}
             </Link>
           );
         })}
